@@ -1,0 +1,8 @@
+source: Programmeringsolympiadens skolkval 2004
+license: cc by-sa
+type: scoring
+grading:
+    show_test_data_groups: true
+name:
+    en: The Clock
+    sv: Klockan
