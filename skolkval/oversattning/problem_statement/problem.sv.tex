@@ -1,18 +1,27 @@
 \problemname{Översättning}
-\textit{Fikonspråket} är ett hemligt språk med gamla anor som till och med har givit upphov till vissa ord, till exempel \textit{fimp} (fikonspråkets \textit{fimpstukon} betyder \textit{stump}). \textit{Rövarspråket} användes av Kalle Blomkvist i Astrid Lindgrens böcker. Skriv ett program som översätter från rövarspråket till fikonspråket!
+\textit{Fikonspråket} är ett hemligt språk med gamla anor som till och med har givit upphov till vissa ord, 
+till exempel \textit{fimp} (fikonspråkets \textit{fimpstukon} betyder \textit{stump}). 
+\textit{Rövarspråket} användes av Kalle Blomkvist i Astrid Lindgrens böcker. 
+Skriv ett program som översätter från rövarspråket till fikonspråket!
 
 För båda språken gäller att man kan härleda varje ord från det motsvarande svenska ordet. 
 
 \begin{itemize}
-        \item För att översätta till fikonspråket delas ordet efter dess första \textit{vokal} i två delar. Dessa delar sätts sedan ihop i omvänd ordning och dessutom tillfogas \textbf{FI} i början och \textbf{KON} i slutet av ordet. \texttt{GET} blir alltså \texttt{FITGEKON}, \texttt{LO} blir \texttt{FILOKON} och \texttt{ASTRONOM} blir \texttt{FISTRONOMAKON}.
-        \item Översättning till röverspråket sker bokstavsvis. Vokaler ändras inte alls, medan varje konsonant skrivs två gånger med ett \textbf{O} emellan. \texttt{MAT} blir alltså \texttt{MOMATOT} och \texttt{ODLA} blir \texttt{ODODLOLA}.
+        \item För att översätta till fikonspråket delas ordet efter dess första \textit{vokal} i två delar. Dessa delar sätts sedan ihop i omvänd ordning och dessutom tillfogas \textbf{FI} i början och \textbf{KON} i slutet av ordet.
+                \texttt{GET} blir alltså \texttt{FITGEKON}, 
+                \texttt{LO} blir \texttt{FILOKON} och \texttt{ASTRONOM} blir \texttt{FISTRONOMAKON}.
+        \item Översättning till rövarspråket sker bokstavsvis. 
+                Vokaler ändras inte alls, medan varje konsonant skrivs två gånger med ett \textbf{O} emellan.
+                \texttt{MAT} blir alltså \texttt{MOMATOT} och \texttt{ODLA} blir \texttt{ODODLOLA}.
 \end{itemize}
 
 
-Din uppgift är att skriva ett program som översätter ett ord skrivet rövarspråk till fikonspråk.
+Din uppgift är att skriva ett program som översätter ett ord skrivet på rövarspråk till fikonspråk.
 
 \section*{Indata}
-Den första och enda raden består av en sträng $S$, ett ord skrivet på rövarspråk. $S$ består endast av bokstäver \texttt{A}-\texttt{Z} och är max 30 tecken lång. Det garanteras att det motsvarande svenska ordet till $S$ har minst en vokal.
+Den första och enda raden består av en sträng $S$, ett ord skrivet på rövarspråk. 
+$S$ består endast av bokstäver \texttt{A}-\texttt{Z} och är max 30 tecken lång.
+Det garanteras att det motsvarande svenska ordet till $S$ har minst en vokal.
 
 \section*{Utdata}
 Skriv ut en sträng, $S$ översatt till fikonspråk.
