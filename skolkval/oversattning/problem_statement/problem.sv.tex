@@ -1,21 +1,21 @@
 \problemname{Översättning}
-\textit{Fikon Språk} är ett hemligt språk med gamla anor som till och med har givit upphov till vissa ord, till exempel \textit{fimp} (fikonspråkets \textit{fimpstukon} betyder \textit{stump}). \textit{Rövarspråket} användes av Kalle Blomkvist i Astrid Lindgrens böcker. Skriv ett program som översätter från rövarspråket till fikonspråket!
+\textit{Fikonspråket} är ett hemligt språk med gamla anor som till och med har givit upphov till vissa ord, till exempel \textit{fimp} (fikonspråkets \textit{fimpstukon} betyder \textit{stump}). \textit{Rövarspråket} användes av Kalle Blomkvist i Astrid Lindgrens böcker. Skriv ett program som översätter från rövarspråket till fikonspråket!
 
-För båda språken gäller att man kan härleda varje ord från det motsvarande ordet. 
+För båda språken gäller att man kan härleda varje ord från det motsvarande svenska ordet. 
 
 \begin{itemize}
         \item För att översätta till fikonspråket delas ordet efter dess första \textit{vokal} i två delar. Dessa delar sätts sedan ihop i omvänd ordning och dessutom tillfogas \textbf{FI} i början och \textbf{KON} i slutet av ordet. \texttt{GET} blir alltså \texttt{FITGEKON}, \texttt{LO} blir \texttt{FILOKON} och \texttt{ASTRONOM} blir \texttt{FISTRONOMAKON}.
         \item Översättning till röverspråket sker bokstavsvis. Vokaler ändras inte alls, medan varje konsonant skrivs två gånger med ett \textbf{O} emellan. \texttt{MAT} blir alltså \texttt{MOMATOT} och \texttt{ODLA} blir \texttt{ODODLOLA}.
 \end{itemize}
 
-Programmet ska fråga efter ett ord ($\leq 30$ tecken), skrivet på rövarspråk. Endast versaler används vid inmatningen. Ordet innehåller bara bokstäver \textit{A}-\textit{Z} och motsvarande svenska ord har minst en vokal. Du kan förutsätta att ordet följer reglerna för rövarspråket. Sedan ska programmet skriva ut ordet översatt till fikonspråk.
+
+Din uppgift är att skriva ett program som översätter ett ord skrivet rövarspråk till fikonspråk.
 
 \section*{Indata}
-Den första linje består av ett heltal \textbf{N}, längden på ett sträng \textbf{S}, ett ord skrivet på rövarspråk.
-Den andra linje består av strängen \textbf{S}. 
+Den första och enda raden består av en sträng $S$, ett ord skrivet på rövarspråk. $S$ består endast av bokstäver \texttt{A}-\texttt{Z} och är max 30 tecken lång. Det garanteras att det motsvarande svenska ordet till $S$ har minst en vokal.
 
 \section*{Utdata}
-Skriv ut ett sträng, \textbf{S} översatt till fikonspråk.
+Skriv ut en sträng, $S$ översatt till fikonspråk.
 
 \section*{Poängsättning}
 Din lösning kommer att testas på en mängd testfallsgrupper. För att få poäng för en grupp så måste du klara alla testfall i gruppen.
@@ -25,6 +25,6 @@ Din lösning kommer att testas på en mängd testfallsgrupper. För att få poä
 \begin{tabular}{| l | l | p{12cm} |}
   \hline
   Grupp & Poängvärde & Gränser \\ \hline
-  $1$   & $30$       & S består bara av vokaler. \\ \hline
+  $1$   & $30$       & $S$ består bara av vokaler. \\ \hline
   $2$   & $70$       & Inga ytterligare begränsningar \\ \hline
 \end{tabular}

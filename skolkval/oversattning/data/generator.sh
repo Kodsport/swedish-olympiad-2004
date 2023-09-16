@@ -22,7 +22,6 @@ tc vowel-05 gen mode="vowel"
 tc vowel-06 gen mode="vowel"
 
 group g2 70
-limits maxN=30 
 include_group sample
 tc small-01 gen N=3
 tc small-02 gen N=5

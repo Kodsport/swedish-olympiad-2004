@@ -17,10 +17,9 @@ void run()
 {
   int max_n = Arg("maxN", 30);
   string mode = Arg("mode", "none");
-  int n = Int(1, max_n);
-  Endl();
   set<char> vowels = {'A','E','I','O','U','Y'};
   string S = Line();
+  assert((int) S.size() <= max_n);
   if (mode == "vowel") {
           for (auto c: S) {
                   assert(vowels.find(c) != vowels.end());

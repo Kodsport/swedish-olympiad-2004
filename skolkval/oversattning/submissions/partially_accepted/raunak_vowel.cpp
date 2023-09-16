@@ -5,9 +5,8 @@ using namespace std;
 #define rep(i, a, b) for (int i = (a); i < (b); ++i)
 
 int main() {
-        int n; 
         string s;
-        cin >> n >>  s;
+        cin >> s;
         string one = "", two = ""; 
         set<char> vokal = {'A','E','I','O','U','Y'};
         bool vokalHittad = 0;

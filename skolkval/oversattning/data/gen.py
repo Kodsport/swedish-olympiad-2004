@@ -1,4 +1,5 @@
 import sys
+import string
 import random
 
 def cmdlinearg(name, default=None):
@@ -10,25 +11,37 @@ def cmdlinearg(name, default=None):
 
 random.seed(int(cmdlinearg('seed', sys.argv[-1])))
 n = int(cmdlinearg('N', 30))
-n //= 3
 mode = cmdlinearg('mode',"none")
 
-vowels = [65, 69, 73, 79, 85, 89]
-a = [chr(random.randint(65,90)) for i in range(n+1)]
-a[random.randint(0, n)] = chr(random.choice(vowels))
+letters = [chr(x) for x in range(65, 91)]
+vowels = ['A', 'E', 'I', 'O', 'U', 'Y']
+consonants = [] 
+for l in letters:
+    if l not in vowels:
+        consonants.append(l)
+
+consonant = vowel = 0
+while vowel == 0:
+    consonant = random.randint(0, n//3)
+    vowel = n - 3*consonant
 
 rovar = []
 
-vowelChars = ['A', 'E', 'I', 'O', 'U', 'Y']
-for x in a:
-    rovar.append(x)
-    if x not in vowelChars:
+while max(consonant, vowel) > 0:
+    choice = random.randint(0, 1)
+    if choice == 0 and vowel > 0:
+        rovar.append(random.choice(vowels))
+        vowel -= 1
+    elif choice == 1 and consonant > 0:
+        rovar.append(random.choice(consonants))
         rovar.append('O')
-        rovar.append(x)
+        rovar.append(rovar[-2])
+        consonant -= 1
 
-if mode=="vowel":
+if mode == "vowel":
     for i in range(len(rovar)):
-        rovar[i] = chr(random.choice(vowels))
+        rovar[i] = random.choice(vowels)
+elif mode != "none":
+    assert(False)
 
-print(len(rovar))
 print("".join([str(x) for x in rovar]))

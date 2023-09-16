@@ -5,9 +5,8 @@ using namespace std;
 #define rep(i, a, b) for (int i = (a); i < (b); ++i)
 
 int main() {
-        int n;
         string s, svenska = ""; 
-        cin >> n >> s;
+        cin >> s;
         set<char> vokal = {'A', 'E', 'I', 'O', 'U', 'Y'};
         rep(i, 0, (int) s.size()) {
                 svenska += s[i];
