@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-n = int(input())
-
 s=input()
+
+n=len(s)
 
 vowel="AEIOUY"
 
