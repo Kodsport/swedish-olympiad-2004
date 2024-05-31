@@ -1,0 +1,21 @@
+\problemname{Tåget}
+
+Tåg kan genom olika vagnar komponeras på olika sätt. Här ska d u skriva ett program som tar reda på hur många. Våra tåg kan innehålla fyra olika typer av vagnar: postvagn (M), personvagn (P), restaurangvagn (R) och godsvagn (G). Loket räknas inte till vagnarna och ingår därför inte i våra kompositioner.
+
+Följande regler gäller för sammansättningen:
+\begin{itemize}
+\item \emph{Postvagn} kan bara inleda tåget, kopplas direkt efter loket eller efter en annan postvagn. Det kan högst finnas två postvagnar, men behöver inte finnas någon.
+\item \emph{Restaurangvagn} måste alltid befinna sig mellan två personvagnar. Det kan finnas hur många som helst men behöver inte finnas någon. 	
+\item Det måste finnas minst en \emph{personvagn} och kan finnas hur många som helst.
+\item \emph{Godsvagn} kopplas alltid sist i tåget. En godsvagn kan endast ha en annan godsvagn efter sig. Det får finnas högst tre godsvagnar, men behöver inte finnas någon. Programmet ska fråga efter hur många vagnar tåget innehåller och därefter beräkna och skriva ut antalet olika tåg som kan komponeras. 
+\end{itemize}
+
+\section*{Indata}
+Indata består av ett heltal $1 \le n \le 30$ - antalet vagnar i tåget.
+
+\section*{Utdata}
+Ditt program ska skriva ut antalet tåg som kan skapas.
+
+
+\section*{Poängsättning}
+Din lösning kommer att testas på flera testfall. För att få 100 poäng så måste du klara alla testfall.

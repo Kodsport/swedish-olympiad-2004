@@ -1,0 +1,30 @@
+\problemname{Rimord}
+
+Du får givet en lång rad med $n$ bokstäver, för enkelhetens skull valda bland \texttt{A}-\texttt{Z}. Genom att börja och sluta läsa raden på valfria ställen, kan du plocka ut ord, totalt $\frac{n(n+1)}{2}$ stycken. Vi begränsar oss alltså inte till verkliga svenska ord utan accepterar vilken delsträng som helst av den givna raden som ett ord. Dock är vi endast intresserade av ord med ett bestämt antal, $v$, vokaler. Som vokaler räknar vi $A, E, I, O, U, Y$.
+
+Din uppgift är att ta fram den största gruppen av sådana ord som alla rimmar på varandra. För att undvika missuppfattningar ger vi här en enkel definition på rim som förhoppningsvis stämmer någorlunda överens med ditt sätt att skriva vers. Två ord rimmar om de uppfyller följande tre villkor:
+
+\begin{itemize}
+	\item Båda orden ska innehålla minst en vokal.
+	\item Från och med första vokalen i varje ord och ända till slutet ska orden vara identiska. Det är alltså bara fram till första vokalen som orden får skija sig åt.
+	\item Orden får inte vara helt identiska.
+\end{itemize}
+
+Exempelvis rimmar \texttt{SJUNGA} och \texttt{UNGA}, \texttt{VARG} och \texttt{KARG} men inte till exempel \texttt{VEDSTAPEL} och \texttt{KONSTAPEL}, \texttt{DRYG} och \texttt{ODRYG}, \texttt{TA} och \texttt{TA}.
+
+Notera om att $ord_1$ rimmar på $ord_2$ och $ord_2$ rimmar på $ord_3$ så rimmar automatiskt $ord_1$ på $ord_3$.
+
+\section*{Indata}
+På första raden står ett heltal $1 \le 1 \le 10\,000$ som anger hur många bokstäver den långa raden av bokstäver innehåller. På andra raden ett heltal $v$, $1 \le v \le 10$, som anger hur många vokaler de bildade orden ska innehålla. På tredje och sista raden står en obruten följd av $n$ bokstäver $A...Z$. Antalet vokaler bland dem är alltid större än $v$.
+
+\section*{Utdata}
+Ett heltal som anger maximala antalet ord som
+\begin{itemize}
+	\item går att bilda från bokstavsföljden genom att börja och sluta läsa den på valfria ställen och
+	\item innehåller exakt $v$ vokaler och
+	\item rimmar på varandra.
+\end{itemize}
+Orden får överlappa varandra i den ursprungliga följden och de får börja eller sluta på samma position i den ursprungliga följden, men observera att samma ord inte får räknas flera gånger.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på flera testfall. För att få 100 poäng så måste du klara alla testfall.

@@ -1,0 +1,17 @@
+
+\problemname{Kulturkrockar}
+
+Historiker är ofta intresserade av i vilken kultur och vid vilken tidpunkt en viss uppfinning först uppstod. Detta är dock inte så lätt att veta eftersom olika kulturer då och då mötts och utbytt information. Om man vet vilka sådana utbyten som har ägt rum och vilka kulturer som känner till uppfinningen idag, kan man ibland räkna ut var den har uppstått. Du ska skriva ett program som gör just detta.
+
+Vi ska använda en mycket förenklad modell av kulturers möten. Vi tänker oss $n$ kulturer (numrerade från $1$ till $n$) som lever helt isolerade utom vid vissa tidpunkter då det sker ett fullständigt utbyte av information mellan två kulturer. Vi behöver inte bry oss om huruvida det rör sig om fredligt samarbete eller krigserövringar, det enda viktiga är att om uppfinningen var känd i den ena kulturen före mötet, så är den känd i båda kulturerna efter mötet. Notera att antalet kulturer aldrig ändras. Efter mötet fortsätter de två kulturerna att vara isolerade och kan samverka på olika sätt med andra kulturer. Det enda vi vet säkert, är att omedelbart efter mötet bär dessa två kulturer på exakt samma kunskap.
+
+\section*{Indata}
+På första raden i indatan står två heltal $n$ och $k$, där $2 \le n \le 1\,000$ och $1 \le k \le 10\,000$. $n$ är antalet kulturer i vår modell och $k$ är det totala antalet möten vi betraktar. Därefter kommer $k$ rader med vardera två heltal $a$ och $b$, båda i intervallet $1...n$. Varje rad beskriver ett möte mellan kultur nummer $a$ och kultur nummer $b$. Mötena inträffar i precis den ordning som anges. Varje möte antas vara fullkomligt avslutat innan nästa möte äger rum.
+
+Efter mötesbeskrivningarna följer en rad med ett heltal $2 \le m \le n$, antalet kulturer som idag känner till uppfinningen, och på följande rad $m$ heltal i intervallet $1...n$, som anger numren på de kulturer som idag känner till uppfinningen.
+
+\section*{Utdata}
+Programmet ska skriva en lista med heltal i intervallet $1...n$. Varje tal anger numret på en kultur i vilken uppfinningen kan ha uppstått. Eller mer precist uttryckt: Om det för varje kultur $x$ finns en möjlig tidpunkt för uppfinningen som gör att spridningen av uppfinningen idag är exakt så som anges, då ska $x$ finnas med i listan, annars inte. Alla talen i listan ska vara olika och sorterade i stigande ordning.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på flera testfall. För att få 100 poäng så måste du klara alla testfall.

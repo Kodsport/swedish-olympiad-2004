@@ -1,0 +1,16 @@
+\problemname{Utskrift}
+
+Pelle har en text inskriven på datorn som han nu vill redigera och skriva ut på skrivaren. Han vill ha utskriften i ett teckensnitt som är ``monospaceat''. Det vill säga, alla tecken har samma bredd (tar upp lika stor plats på en rad). Dessutom vill han anpassa utskriften till en given radlängd, $n$ tecken/rad.
+
+Han inser att det knappast är möjligt att få alla rader att innehålla exakt $n$ tecken, eftersom det ska vara exakt \textbf{ett} mellanslag mellan två ord. Han är dock nöjd om han lyckas formatera utskriften, så att han kommer så nära det önskade resultatet som möjligt. Som mått på resultatet definerar han avvikelsen i antal tecken hos den ``sämsta'' raden från de önskade $n$ tecknen. Det är detta mått han nu vill minimera. 
+
+Skriv ett program som läser texten och skriver ut den med radbrytningar på sådana ställen att ovanstående mått minimeras.
+
+\section*{Indata}
+Indatan inleds med en rad som anger $5 \le n \le 80$. På nästa rad finns ett tal $1 \le k \le 1000$ som anger antalet ord, inget längre än 20 tecken. Därefter följer $k$ rader med ett ord på varje rad. Orden innehåller inga mellanslag, men kan innehålla skiljetecken som i så fall behandlas som en del av ordet och inte får säras från detta. Texten som du ska skriva ut består av dessa $k$ ord i just denna ordning. Orden innehåller skiljetecken och bokstäverna $a-z$ och $A-Z$.
+
+\section*{Utdata}
+Programmet ska skriva ut texten med radbrytningar.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på flera testfall. För att få 100 poäng så måste du klara alla testfall.
