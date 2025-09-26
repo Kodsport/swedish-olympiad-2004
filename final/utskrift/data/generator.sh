@@ -2,7 +2,9 @@
 
 . ../../../testdata_tools/gen.sh
 
-use_solution js.cc
+use_solution chatgpt.py
+
+compile gen_rand.py
 
 samplegroup
 sample sample01
@@ -14,3 +16,6 @@ tc_manual secret02
 tc_manual secret03
 tc_manual secret04
 tc_manual secret05
+for i in {1..30}; do
+    tc g1-$i gen_rand
+done;

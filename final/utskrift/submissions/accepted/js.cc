@@ -18,7 +18,8 @@ int dp(int at){
 	int len = -1;
 	for(int i = at; len < 120 && i < k; i++){
 		len += lines[i].size() + 1;
-		int diff = max((int)abs(len - n), dp(i+1));
+		if (len > n) break;
+		int diff = max(len - n, dp(i+1));
 		if(diff < best[at]){
 			best[at] = diff;
 			nxt[at] = i+1;
