@@ -1,0 +1,17 @@
+\problemname{The Train}
+
+Trains can be composed in different ways using different types of cars. Here you are to write a program that determines how many compositions are possible. Our trains can contain four different types of cars: mail car (M), passenger car (P), restaurant car (R), and freight car (G). The locomotive is not counted as a car and therefore does not appear in our compositions.
+
+The following rules apply for the composition:
+\begin{itemize}
+\item A \emph{mail car} can only begin the train, coupled directly after the locomotive or after another mail car. There can be at most two mail cars, but there need not be any.
+\item A \emph{restaurant car} must always be between two passenger cars. There can be any number of them but there need not be any.
+\item There must be at least one \emph{passenger car}, and there can be any number of them.
+\item A \emph{freight car} is always coupled last in the train. A freight car can only have another freight car after it. There can be at most three freight cars, but there need not be any.
+\end{itemize}
+
+\section*{Input}
+The input consists of a single integer $1 \le n \le 30$ --- the number of cars in the train.
+
+\section*{Output}
+Your program should output the number of trains that can be composed.

@@ -1,0 +1,13 @@
+\problemname{Culture Clashes}
+
+Historians are often interested in which culture and at what time a certain invention first arose. However, this is not easy to know since different cultures have occasionally met and exchanged information. If one knows which such exchanges have taken place and which cultures know about the invention today, one can sometimes determine where it originated. You are to write a program that does exactly this.
+
+We will use a very simplified model of cultural encounters. We imagine $n$ cultures (numbered from $1$ to $n$) that live in complete isolation except at certain times when a complete exchange of information occurs between two cultures. We need not concern ourselves with whether it involves peaceful cooperation or conquest; the only important thing is that if the invention was known in one culture before the meeting, it is known in both cultures after the meeting. Note that the number of cultures never changes. After the meeting, the two cultures continue to be isolated and may interact in various ways with other cultures. The only thing we know for certain is that immediately after the meeting, these two cultures carry exactly the same knowledge.
+
+\section*{Input}
+The first line of input contains two integers $n$ and $k$, where $2 \le n \le 1\,000$ and $1 \le k \le 10\,000$. $n$ is the number of cultures in our model and $k$ is the total number of meetings we consider. Then follow $k$ lines with two integers $a$ and $b$ each, both in the range $1...n$. Each line describes a meeting between culture number $a$ and culture number $b$. The meetings occur in exactly the order given. Each meeting is assumed to be fully completed before the next meeting takes place.
+
+After the meeting descriptions follows a line with an integer $2 \le m \le n$, the number of cultures that know about the invention today, and on the following line $m$ integers in the range $1...n$, specifying the numbers of the cultures that know about the invention today.
+
+\section*{Output}
+The program should output a list of integers in the range $1...n$. Each number indicates a culture in which the invention could have originated. More precisely: If for each culture $x$ there exists a possible time for the invention such that the spread of the invention today is exactly as specified, then $x$ should be included in the list; otherwise not. All numbers in the list should be distinct and sorted in ascending order.
