@@ -1,13 +1,30 @@
 \problemname{Utskrift}
 
-Pelle har en text inskriven på datorn som han nu vill redigera och skriva ut på skrivaren. Han vill ha utskriften i ett teckensnitt som är ``monospaceat''. Det vill säga, alla tecken har samma bredd (tar upp lika stor plats på en rad). Dessutom vill han anpassa utskriften till en given radlängd, $n$ tecken/rad.
+Pelle har en text inskriven på datorn som han nu vill redigera och skriva ut på skrivaren.
+Han vill ha utskriften i ett teckensnitt som är ''monospaceat''.
+Det vill säga, alla tecken har samma bredd (tar upp lika stor plats på en rad).
+Dessutom vill han anpassa utskriften till en given radlängd, som mest $n$ tecken/rad.
 
-Han inser att det knappast är möjligt att få alla rader att innehålla exakt $n$ tecken, eftersom det ska vara exakt \textbf{ett} mellanslag mellan två ord. Han är dock nöjd om han lyckas formatera utskriften, så att han kommer så nära det önskade resultatet som möjligt. Som mått på resultatet definerar han avvikelsen i antal tecken hos den ``sämsta'' raden från de önskade $n$ tecknen. Det är detta mått han nu vill minimera. 
+Han inser att det knappast är möjligt att få alla rader att innehålla exakt $n$ tecken,
+eftersom det ska vara exakt \textbf{ett} mellanslag mellan två ord.
+Han är dock nöjd om han lyckas formatera utskriften, så att han kommer så nära det önskade resultatet som möjligt.
+Som mått på resultatet definerar han avvikelsen i antal tecken hos den ''sämsta'' raden från de önskade $n$ tecknen.
+Det är detta mått han nu vill minimera. 
 
 Skriv ett program som läser texten och skriver ut den med radbrytningar på sådana ställen att ovanstående mått minimeras.
 
 \section*{Indata}
-Indatan inleds med en rad som anger $5 \le n \le 80$. På nästa rad finns ett tal $1 \le k \le 1000$ som anger antalet ord, inget längre än 20 tecken. Därefter följer $k$ rader med ett ord på varje rad. Orden innehåller inga mellanslag, men kan innehålla skiljetecken som i så fall behandlas som en del av ordet och inte får säras från detta. Texten som du ska skriva ut består av dessa $k$ ord i just denna ordning. Orden innehåller skiljetecken och bokstäverna $a-z$ och $A-Z$.
+Den första raden av indata innehåller heltalet $n$ ($1 \leq n \leq 80$),
+antalet tecken som får plats på varje rad.
+
+Raden därefter innehåller heltalet $k$ ($1 \leq k \leq 1000$),
+antalet ord.
+
+Därefter följer $k$ rader med ett ord $s$ ($1 \leq |s| \leq \min(n,20)$) på varje rad.
+Orden innehåller skiljetecken och bokstäverna \texttt{a}-\texttt{z} och \texttt{A}-\texttt{Z}, men orden i sig kan inte innehålla mellanslag.
+Skiljetecken behandlas som en del av ordet och får inte säras från detta.
+Texten som du ska skriva ut består av dessa $k$ ord i just denna ordning.
 
 \section*{Utdata}
-Programmet ska skriva ut texten med radbrytningar.
+Skriv ut texten med radbrytningar, på så vis att den största avvikelsen från $n$ minimeras.
+Det ska finnas exakt ett mellanslag mellan varje ord.
