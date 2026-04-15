@@ -9,7 +9,7 @@ typedef long long ll;
 typedef pair<int, int> pii;
 typedef vector<ll> vi;
 
-const string ALLOWED_CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+const string ALLOWED_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
 int main(int argc, char **argv) {
     init_io(argc, argv);
@@ -27,9 +27,12 @@ int main(int argc, char **argv) {
         vector<string> out_tokens;
         int penalty = 0;
         for (string line : lines) {
+            while (sz(line) && line.back()==' ') { // let's be generous and allow trailing spaces
+                line.pop_back();
+            }
             if (sz(line) > n) feedback("Output line too long");
-            if (sz(line) == 0) continue;
-            if (line[0] == ' ' || line.back() == ' ') feedback("Output line has leading or trailing space");
+            if (sz(line) == 0) continue; // let's be generous with extra newlines
+            if (line[0] == ' ') feedback("Output line has leading space");
             penalty = max(penalty, n - sz(line));
 
             string curr_part;
@@ -46,7 +49,7 @@ int main(int argc, char **argv) {
             assert(!curr_part.empty());
             out_tokens.push_back(curr_part);
         }
-        if (out_tokens.size() != k) feedback("Expected %d lines of output, got %d", k, (int)out_tokens.size());
+        if (out_tokens.size() != k) feedback("Expected %d tokens of output, got %d", k, (int)out_tokens.size());
         if (out_tokens != tokens) feedback("Output lines do not match input lines");
         return penalty;
     };
@@ -54,7 +57,7 @@ int main(int argc, char **argv) {
     int judge_score = check(judge_ans, judge_error);
     int author_score = check(author_out, wrong_answer);
 
-    if (author_score < judge_score) judge_error("Author solution provides better score");
-    if (author_score > judge_score) wrong_answer("Author solution provides suboptimal score");
+    if (author_score < judge_score) judge_error("Author solution provides better score than judge");
+    if (author_score > judge_score) wrong_answer("Author solution provides worse score than judge");
     accept();
 }

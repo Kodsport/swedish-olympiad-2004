@@ -2,7 +2,7 @@
 
 . ../../../testdata_tools/gen.sh
 
-use_solution chatgpt.py
+use_solution gemini.py
 
 compile gen_rand.py
 
@@ -11,11 +11,11 @@ sample sample01
 
 group group1 100
 include_group sample
-tc_manual secret01
-tc_manual secret02
-tc_manual secret03
-tc_manual secret04
-tc_manual secret05
-for i in {1..30}; do
-    tc g1-$i gen_rand
-done;
+tg_manual ../manual_data
+for i in {1..15}; do
+    tc g1-$i gen_rand mode=random
+done
+
+for i in {16..30}; do
+    tc g1-$i gen_rand mode=max
+done

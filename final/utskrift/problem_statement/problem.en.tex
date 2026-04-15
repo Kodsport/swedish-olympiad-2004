@@ -1,0 +1,30 @@
+\problemname{Printout}
+
+Pelle has a text on his computer that he now wants to edit and print.
+He wants the printout in a ``monospaced'' font.
+That is, all characters have the same width (take up the same amount of space on a line).
+Additionally, he wants to fit the printout to a given line length of at most $n$ characters per line.
+
+He realizes that it is hardly possible to make every line contain exactly $n$ characters,
+since there must be exactly \textbf{one} space between two words.
+However, he is satisfied if he manages to format the printout so that it comes as close to the desired result as possible.
+As a measure of the result, he defines the deviation in number of characters of the ``worst'' line from the desired $n$ characters.
+He now wants to minimize this measure.
+
+Write a program that reads the text and prints it with line breaks at positions such that the above measure is minimized.
+
+\section*{Input}
+The first line of input contains the integer $n$ ($1 \leq n \leq 80$),
+the number of characters that fit on each line.
+
+The next line contains the integer $k$ ($1 \leq k \leq 1000$),
+the number of words.
+
+Then follow $k$ lines with one word $s$ ($1 \leq |s| \leq \min(n, 20)$) on each line.
+The words contain punctuation and the letters \texttt{a}-\texttt{z} and \texttt{A}-\texttt{Z}, but the words themselves cannot contain spaces.
+Punctuation is treated as part of the word and may not be separated from it.
+The text you should print consists of these $k$ words in this exact order.
+
+\section*{Output}
+Print the text with line breaks such that the maximum deviation from $n$ is minimized.
+There must be exactly one space between consecutive words on the same line.

@@ -13,11 +13,22 @@ def cmdlinearg(name, default=None):
         sys.exit(1)
     return default
 
-#random.seed(int(cmdlinearg('seed', sys.argv[-1])))
+random.seed(int(cmdlinearg('seed', sys.argv[-1])))
+mode = cmdlinearg('mode')
 
-k=randint(5, 80)
-print(k)
-n=1000
+
+if mode=='random':
+    k=randint(1, 1000)
+elif mode=='max':
+    k=1000
+else:
+    assert 0
+
+n=randint(1, 80)
 print(n)
-for i in range(n):
-    print(''.join('a'*randint(1,min(k, 20))))
+print(k)
+
+ALLOWED_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+
+for i in range(k):
+    print(''.join(random.choices(ALLOWED_CHARS, k=randint(1,min(n, 20)))))
