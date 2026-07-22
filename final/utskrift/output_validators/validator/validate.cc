@@ -27,13 +27,12 @@ int main(int argc, char **argv) {
         vector<string> out_tokens;
         int penalty = 0;
         for (string line : lines) {
-            while (sz(line) && line.back()==' ') { // let's be generous and allow trailing spaces
+            while (sz(line) && (line.back()==' ' || line.back()=='\r')) { // let's be generous and allow trailing spaces and \r\n line endings
                 line.pop_back();
             }
-            if (sz(line) > n) feedback("Output line too long");
             if (sz(line) == 0) continue; // let's be generous with extra newlines
             if (line[0] == ' ') feedback("Output line has leading space");
-            penalty = max(penalty, n - sz(line));
+            penalty = max(penalty, abs(n - sz(line)));
 
             string curr_part;
             for (char c : line) {

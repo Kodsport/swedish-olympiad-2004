@@ -2,7 +2,7 @@
 
 . ../../../testdata_tools/gen.sh
 
-use_solution gemini.py
+use_solution gemini2.py
 
 compile gen_rand.py
 

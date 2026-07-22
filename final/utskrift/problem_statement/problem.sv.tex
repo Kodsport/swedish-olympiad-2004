@@ -3,7 +3,7 @@
 Pelle har en text inskriven på datorn som han nu vill redigera och skriva ut på skrivaren.
 Han vill ha utskriften i ett teckensnitt som är ''monospaceat''.
 Det vill säga, alla tecken har samma bredd (tar upp lika stor plats på en rad).
-Dessutom vill han anpassa utskriften till en given radlängd, som mest $n$ tecken/rad.
+Dessutom vill han anpassa utskriften till en given radlängd, $n$ tecken/rad.
 
 Han inser att det knappast är möjligt att få alla rader att innehålla exakt $n$ tecken,
 eftersom det ska vara exakt \textbf{ett} mellanslag mellan två ord.
@@ -14,13 +14,13 @@ Det är detta mått han nu vill minimera.
 Skriv ett program som läser texten och skriver ut den med radbrytningar på sådana ställen att ovanstående mått minimeras.
 
 \section*{Indata}
-Den första raden av indata innehåller heltalet $n$ ($1 \leq n \leq 80$),
-antalet tecken som får plats på varje rad.
+Den första raden av indata innehåller heltalet $n$ ($5 \leq n \leq 80$),
+den önskade radlängden.
 
 Raden därefter innehåller heltalet $k$ ($1 \leq k \leq 1000$),
 antalet ord.
 
-Därefter följer $k$ rader med ett ord $s$ ($1 \leq |s| \leq \min(n,20)$) på varje rad.
+Därefter följer $k$ rader med ett ord $s$ ($1 \leq |s| \leq 20$) på varje rad.
 Orden innehåller skiljetecken och bokstäverna \texttt{a}-\texttt{z} och \texttt{A}-\texttt{Z}, men orden i sig kan inte innehålla mellanslag.
 Skiljetecken behandlas som en del av ordet och får inte säras från detta.
 Texten som du ska skriva ut består av dessa $k$ ord i just denna ordning.

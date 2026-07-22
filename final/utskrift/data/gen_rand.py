@@ -24,11 +24,11 @@ elif mode=='max':
 else:
     assert 0
 
-n=randint(1, 80)
+n=randint(5, 80)
 print(n)
 print(k)
 
 ALLOWED_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 
 for i in range(k):
-    print(''.join(random.choices(ALLOWED_CHARS, k=randint(1,min(n, 20)))))
+    print(''.join(random.choices(ALLOWED_CHARS, k=randint(1,20))))
