@@ -1,0 +1,39 @@
+\problemname{Translation}
+\textit{Fikonspråket} (Fig language) is a secret language with ancient origins that has even given rise to certain words,
+for example \textit{fimp} (fikonspråket's \textit{fimpstukon} means \textit{stump}).
+\textit{Rövarspråket} (Robber's language) was used by Kalle Blomkvist in Astrid Lindgren's books.
+Write a program that translates from rövarspråket to fikonspråket!
+
+For both languages, each word can be derived from the corresponding Swedish word.
+
+\begin{itemize}
+        \item To translate to fikonspråket, the word is split after its first \textit{vowel} into two parts. These parts are then joined in reverse order, and additionally \textbf{FI} is prepended and \textbf{KON} is appended to the word.
+                \texttt{GET} thus becomes \texttt{FITGEKON},
+                \texttt{LO} becomes \texttt{FILOKON}, and \texttt{ASTRONOM} becomes \texttt{FISTRONOMAKON}.
+        \item Translation to rövarspråket is done letter by letter.
+                Vowels are not changed at all, while each consonant is written twice with an \textbf{O} in between.
+                \texttt{MAT} thus becomes \texttt{MOMATOT} and \texttt{ODLA} becomes \texttt{ODODLOLA}.
+\end{itemize}
+
+
+Your task is to write a program that translates a word written in rövarspråket to fikonspråket.
+
+\section*{Input}
+The first and only line consists of a string $S$, a word written in rövarspråket.
+$S$ consists only of letters \texttt{A}--\texttt{Z} and is at most 30 characters long.
+If you translate $S$ to Swedish, that word contains at least one vowel.
+
+\section*{Output}
+Output a single string, $S$ translated to fikonspråket.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups. To earn points for a group, you must pass all test cases in that group.
+
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Group & Points & Constraints \\ \hline
+  $1$   & $30$       & $S$ consists only of vowels. \\ \hline
+  $2$   & $70$       & No additional constraints. \\ \hline
+\end{tabular}

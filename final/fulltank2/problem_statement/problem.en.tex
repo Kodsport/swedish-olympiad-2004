@@ -1,0 +1,17 @@
+\problemname{Full Tank}
+
+When filling up at MacMack, \emph{ten-kronor rounding} is applied. If, for example, the unrounded amount ends at 164.99 kronor, it is rounded down to 160 kronor, while the amount 165.00 is rounded up to 170 kronor.
+
+Write a program that receives information about the filled \emph{volume} (always a whole number of liters) and the corresponding, rounded, price in kronor for $n$ fill-ups, and using this data computes the price for the latest fill-up (given the volume in liters).
+
+\section*{Input}
+The first line contains an integer $1 \le n \le 5$.
+
+The next $n$ lines contain information about one fill-up each. A fill-up consists of two space-separated integers --- the filled volume in liters, and the rounded price.
+
+The last line contains the volume of the last fill-up.
+
+The test data is designed so that there is a unique answer.
+
+\section*{Output}
+Output a single integer: the price in kronor for the last fill-up.
